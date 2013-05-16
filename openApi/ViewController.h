@@ -10,4 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *labelError;
+- (IBAction)acceder:(UIButton *)sender;
+
 @end

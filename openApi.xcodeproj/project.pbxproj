@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE3E441A1745118E00F7E3F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6793551744C85A001C8959 /* Security.framework */; };
+		AE44E51817454B21008815FC /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6793531744C816001C8959 /* GTMOAuth2ViewTouch.xib */; };
 		AE6793291744C7F8001C8959 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6793281744C7F8001C8959 /* UIKit.framework */; };
 		AE67932B1744C7F8001C8959 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE67932A1744C7F8001C8959 /* Foundation.framework */; };
 		AE67932D1744C7F8001C8959 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE67932C1744C7F8001C8959 /* CoreGraphics.framework */; };
@@ -18,6 +20,11 @@
 		AE67933F1744C7F8001C8959 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE67933E1744C7F8001C8959 /* Default-568h@2x.png */; };
 		AE6793421744C7F8001C8959 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6793401744C7F8001C8959 /* MainStoryboard.storyboard */; };
 		AE6793451744C7F8001C8959 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6793441744C7F8001C8959 /* ViewController.m */; };
+		AE6793581744C86C001C8959 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6793571744C86C001C8959 /* SystemConfiguration.framework */; };
+		AE6793591744C967001C8959 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE67934C1744C816001C8959 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AE67935A1744C967001C8959 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AE67934E1744C816001C8959 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AE67935B1744C967001C8959 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6793501744C816001C8959 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AE67935C1744C967001C8959 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6793521744C816001C8959 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,17 @@
 		AE6793411744C7F8001C8959 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AE6793431744C7F8001C8959 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AE6793441744C7F8001C8959 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AE67934B1744C816001C8959 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		AE67934C1744C816001C8959 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		AE67934D1744C816001C8959 /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
+		AE67934E1744C816001C8959 /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
+		AE67934F1744C816001C8959 /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2SignIn.h; sourceTree = "<group>"; };
+		AE6793501744C816001C8959 /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
+		AE6793511744C816001C8959 /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
+		AE6793521744C816001C8959 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
+		AE6793531744C816001C8959 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		AE6793551744C85A001C8959 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AE6793571744C86C001C8959 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3E441A1745118E00F7E3F3 /* Security.framework in Frameworks */,
+				AE6793581744C86C001C8959 /* SystemConfiguration.framework in Frameworks */,
 				AE6793291744C7F8001C8959 /* UIKit.framework in Frameworks */,
 				AE67932B1744C7F8001C8959 /* Foundation.framework in Frameworks */,
 				AE67932D1744C7F8001C8959 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +76,7 @@
 		AE67931C1744C7F8001C8959 = {
 			isa = PBXGroup;
 			children = (
+				AE6793541744C81E001C8959 /* GTMOAuth2 */,
 				AE67932E1744C7F8001C8959 /* openApi */,
 				AE6793271744C7F8001C8959 /* Frameworks */,
 				AE6793261744C7F8001C8959 /* Products */,
@@ -73,6 +94,8 @@
 		AE6793271744C7F8001C8959 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE6793571744C86C001C8959 /* SystemConfiguration.framework */,
+				AE6793551744C85A001C8959 /* Security.framework */,
 				AE6793281744C7F8001C8959 /* UIKit.framework */,
 				AE67932A1744C7F8001C8959 /* Foundation.framework */,
 				AE67932C1744C7F8001C8959 /* CoreGraphics.framework */,
@@ -105,6 +128,22 @@
 				AE67933E1744C7F8001C8959 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE6793541744C81E001C8959 /* GTMOAuth2 */ = {
+			isa = PBXGroup;
+			children = (
+				AE67934B1744C816001C8959 /* GTMHTTPFetcher.h */,
+				AE67934C1744C816001C8959 /* GTMHTTPFetcher.m */,
+				AE67934D1744C816001C8959 /* GTMOAuth2Authentication.h */,
+				AE67934E1744C816001C8959 /* GTMOAuth2Authentication.m */,
+				AE67934F1744C816001C8959 /* GTMOAuth2SignIn.h */,
+				AE6793501744C816001C8959 /* GTMOAuth2SignIn.m */,
+				AE6793511744C816001C8959 /* GTMOAuth2ViewControllerTouch.h */,
+				AE6793521744C816001C8959 /* GTMOAuth2ViewControllerTouch.m */,
+				AE6793531744C816001C8959 /* GTMOAuth2ViewTouch.xib */,
+			);
+			name = GTMOAuth2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +202,7 @@
 				AE67933D1744C7F8001C8959 /* Default@2x.png in Resources */,
 				AE67933F1744C7F8001C8959 /* Default-568h@2x.png in Resources */,
 				AE6793421744C7F8001C8959 /* MainStoryboard.storyboard in Resources */,
+				AE44E51817454B21008815FC /* GTMOAuth2ViewTouch.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6793591744C967001C8959 /* GTMHTTPFetcher.m in Sources */,
+				AE67935A1744C967001C8959 /* GTMOAuth2Authentication.m in Sources */,
+				AE67935B1744C967001C8959 /* GTMOAuth2SignIn.m in Sources */,
+				AE67935C1744C967001C8959 /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				AE6793351744C7F8001C8959 /* main.m in Sources */,
 				AE6793391744C7F8001C8959 /* AppDelegate.m in Sources */,
 				AE6793451744C7F8001C8959 /* ViewController.m in Sources */,
@@ -263,6 +307,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "openApi/openApi-Prefix.pch";
 				INFOPLIST_FILE = "openApi/openApi-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,6 +322,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "openApi/openApi-Prefix.pch";
 				INFOPLIST_FILE = "openApi/openApi-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -298,6 +350,7 @@
 				AE67934A1744C7F8001C8959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
