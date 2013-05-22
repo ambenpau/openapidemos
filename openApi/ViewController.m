@@ -2,7 +2,7 @@
 //  ViewController.m
 //  openApi
 //
-//  Created by macoscar on 16/05/13.
+//  Created by Oscar Iglesias Lopez on 16/05/13.
 //  Copyright (c) 2013 Universitat Oberta de Catalunya. All rights reserved.
 //
 
@@ -100,7 +100,7 @@
         self.labelError.textColor = [UIColor greenColor];
         
         // Cambiamos de controlador al controller de lo que sera el menu.
-        MenuViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuView"];
+        UserViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuView"];
         // Para que este pueda atacar al servidor le pasamos el objeto de autenticacion que contiene el token
         menuViewController.auth = auth;
         [self presentViewController:menuViewController animated:YES completion:nil];

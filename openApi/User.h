@@ -2,7 +2,7 @@
 //  User.h
 //  openApi
 //
-//  Created by macoscar on 17/05/13.
+//  Created by Oscar Iglesias Lopez on 17/05/13.
 //  Copyright (c) 2013 Universitat Oberta de Catalunya. All rights reserved.
 //
 
@@ -15,9 +15,11 @@
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *number;
 @property (nonatomic, retain) NSString *fullname;
-@property (nonatomic, retain) NSString *photoURL;
 @property (nonatomic, retain) NSString *language;
 @property (nonatomic, retain) NSString *sessionID;
 @property (nonatomic, retain) NSString *email;
+@property (nonatomic, retain) UIImage *photo;
+
+- (void) setDatos:(NSDictionary *)userDictionary;
 
 @end

@@ -7,20 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE15A871174669EA00D1971F /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AE15A863174669E900D1971F /* NSObject+SBJSON.m */; };
-		AE15A872174669EA00D1971F /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AE15A865174669E900D1971F /* NSString+SBJSON.m */; };
-		AE15A873174669EA00D1971F /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AE15A867174669EA00D1971F /* SBJSON.m */; };
-		AE15A874174669EA00D1971F /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE15A869174669EA00D1971F /* SBJsonBase.m */; };
-		AE15A875174669EA00D1971F /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AE15A86B174669EA00D1971F /* SBJsonParser.m */; };
-		AE15A876174669EA00D1971F /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE15A86D174669EA00D1971F /* SBJsonWriter.m */; };
-		AE15A877174669EA00D1971F /* myJson.m in Sources */ = {isa = PBXBuildFile; fileRef = AE15A870174669EA00D1971F /* myJson.m */; };
 		AE15A87A17466A6B00D1971F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AE15A87917466A6B00D1971F /* User.m */; };
 		AE15A87C17468B6D00D1971F /* ico57.png in Resources */ = {isa = PBXBuildFile; fileRef = AE15A87B17468B6D00D1971F /* ico57.png */; };
 		AE15A87E17468B7100D1971F /* ico114.png in Resources */ = {isa = PBXBuildFile; fileRef = AE15A87D17468B7100D1971F /* ico114.png */; };
 		AE15A88417468BAB00D1971F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE15A88317468BAB00D1971F /* Default-568h@2x.png */; };
 		AE3E441A1745118E00F7E3F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6793551744C85A001C8959 /* Security.framework */; };
 		AE44E51817454B21008815FC /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6793531744C816001C8959 /* GTMOAuth2ViewTouch.xib */; };
-		AE47F29517455D8600370271 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE47F29417455D8600370271 /* MenuViewController.m */; };
+		AE47F29517455D8600370271 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE47F29417455D8600370271 /* UserViewController.m */; };
 		AE6793291744C7F8001C8959 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6793281744C7F8001C8959 /* UIKit.framework */; };
 		AE67932B1744C7F8001C8959 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE67932A1744C7F8001C8959 /* Foundation.framework */; };
 		AE67932D1744C7F8001C8959 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE67932C1744C7F8001C8959 /* CoreGraphics.framework */; };
@@ -40,28 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AE15A861174669E900D1971F /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		AE15A862174669E900D1971F /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		AE15A863174669E900D1971F /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
-		AE15A864174669E900D1971F /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		AE15A865174669E900D1971F /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
-		AE15A866174669E900D1971F /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		AE15A867174669EA00D1971F /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
-		AE15A868174669EA00D1971F /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		AE15A869174669EA00D1971F /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
-		AE15A86A174669EA00D1971F /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		AE15A86B174669EA00D1971F /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
-		AE15A86C174669EA00D1971F /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		AE15A86D174669EA00D1971F /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		AE15A86F174669EA00D1971F /* myJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myJson.h; sourceTree = "<group>"; };
-		AE15A870174669EA00D1971F /* myJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myJson.m; sourceTree = "<group>"; };
 		AE15A87817466A6B00D1971F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		AE15A87917466A6B00D1971F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		AE15A87B17468B6D00D1971F /* ico57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico57.png; sourceTree = "<group>"; };
 		AE15A87D17468B7100D1971F /* ico114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico114.png; sourceTree = "<group>"; };
 		AE15A88317468BAB00D1971F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		AE47F29317455D8600370271 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		AE47F29417455D8600370271 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		AE47F29317455D8600370271 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		AE47F29417455D8600370271 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		AE6793251744C7F8001C8959 /* openApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6793281744C7F8001C8959 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AE67932A1744C7F8001C8959 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,51 +85,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE15A85F174669E900D1971F /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				AE15A860174669E900D1971F /* JSON */,
-				AE15A86E174669EA00D1971F /* JSON-Url */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
-		AE15A860174669E900D1971F /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				AE15A861174669E900D1971F /* JSON.h */,
-				AE15A862174669E900D1971F /* NSObject+SBJSON.h */,
-				AE15A863174669E900D1971F /* NSObject+SBJSON.m */,
-				AE15A864174669E900D1971F /* NSString+SBJSON.h */,
-				AE15A865174669E900D1971F /* NSString+SBJSON.m */,
-				AE15A866174669E900D1971F /* SBJSON.h */,
-				AE15A867174669EA00D1971F /* SBJSON.m */,
-				AE15A868174669EA00D1971F /* SBJsonBase.h */,
-				AE15A869174669EA00D1971F /* SBJsonBase.m */,
-				AE15A86A174669EA00D1971F /* SBJsonParser.h */,
-				AE15A86B174669EA00D1971F /* SBJsonParser.m */,
-				AE15A86C174669EA00D1971F /* SBJsonWriter.h */,
-				AE15A86D174669EA00D1971F /* SBJsonWriter.m */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
-		AE15A86E174669EA00D1971F /* JSON-Url */ = {
-			isa = PBXGroup;
-			children = (
-				AE15A86F174669EA00D1971F /* myJson.h */,
-				AE15A870174669EA00D1971F /* myJson.m */,
-			);
-			path = "JSON-Url";
-			sourceTree = "<group>";
-		};
 		AE67931C1744C7F8001C8959 = {
 			isa = PBXGroup;
 			children = (
 				AE15A88317468BAB00D1971F /* Default-568h@2x.png */,
 				AE15A87D17468B7100D1971F /* ico114.png */,
 				AE15A87B17468B6D00D1971F /* ico57.png */,
-				AE15A85F174669E900D1971F /* JSON */,
 				AE6793541744C81E001C8959 /* GTMOAuth2 */,
 				AE67932E1744C7F8001C8959 /* openApi */,
 				AE6793271744C7F8001C8959 /* Frameworks */,
@@ -185,8 +124,8 @@
 				AE6793371744C7F8001C8959 /* AppDelegate.h */,
 				AE6793381744C7F8001C8959 /* AppDelegate.m */,
 				AE6793401744C7F8001C8959 /* MainStoryboard.storyboard */,
-				AE47F29317455D8600370271 /* MenuViewController.h */,
-				AE47F29417455D8600370271 /* MenuViewController.m */,
+				AE47F29317455D8600370271 /* UserViewController.h */,
+				AE47F29417455D8600370271 /* UserViewController.m */,
 				AE6793431744C7F8001C8959 /* ViewController.h */,
 				AE6793441744C7F8001C8959 /* ViewController.m */,
 				AE15A87817466A6B00D1971F /* User.h */,
@@ -303,14 +242,7 @@
 				AE6793351744C7F8001C8959 /* main.m in Sources */,
 				AE6793391744C7F8001C8959 /* AppDelegate.m in Sources */,
 				AE6793451744C7F8001C8959 /* ViewController.m in Sources */,
-				AE47F29517455D8600370271 /* MenuViewController.m in Sources */,
-				AE15A871174669EA00D1971F /* NSObject+SBJSON.m in Sources */,
-				AE15A872174669EA00D1971F /* NSString+SBJSON.m in Sources */,
-				AE15A873174669EA00D1971F /* SBJSON.m in Sources */,
-				AE15A874174669EA00D1971F /* SBJsonBase.m in Sources */,
-				AE15A875174669EA00D1971F /* SBJsonParser.m in Sources */,
-				AE15A876174669EA00D1971F /* SBJsonWriter.m in Sources */,
-				AE15A877174669EA00D1971F /* myJson.m in Sources */,
+				AE47F29517455D8600370271 /* UserViewController.m in Sources */,
 				AE15A87A17466A6B00D1971F /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
