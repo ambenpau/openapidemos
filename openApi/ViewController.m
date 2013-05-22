@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "GTMOAuth2ViewControllerTouch.h"
-#import "GTMOAuth2Authentication.h"
 
 #define keychainName    @"OpenApi_UOC"
 #define urlToken        @"http://denver.uoc.es:8080/webapps/uocapi/oauth/token"
@@ -83,6 +81,7 @@
         // Authentication failed (perhaps the user denied access, or closed the window before granting access)
         
         NSLog(@"Authentication error: %@", error);
+        self.labelError.text = @"Error de autenticación";
       /*  NSData *responseData = [[error userInfo] objectForKey:@"data"]; // kGTMHTTPFetcherStatusDataKey
         
         if ([responseData length] > 0) {
@@ -95,7 +94,16 @@
     } else {
         // Sign-in succeeded
         NSLog(@"Sign-in succeeded");
-        NSLog(@"authorization=%@\nexpiration date=%@", auth.accessToken, auth.expirationDate);
+        NSLog(@"user=%@ \n authorization=%@ \n expiration date=%@", auth.userAgent, auth.accessToken, auth.expirationDate);
+        NSLog(@"Scope = %@", auth.scope);
+        self.labelError.text = @"Access Granted";
+        self.labelError.textColor = [UIColor greenColor];
+        
+        // Cambiamos de controlador al controller de lo que sera el menu.
+        MenuViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuView"];
+        // Para que este pueda atacar al servidor le pasamos el objeto de autenticacion que contiene el token
+        menuViewController.auth = auth;
+        [self presentViewController:menuViewController animated:YES completion:nil];
     }
 }
 

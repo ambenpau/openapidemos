@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuViewController.h"
+#import "GTMOAuth2ViewControllerTouch.h"
 
 @interface ViewController : UIViewController
 
