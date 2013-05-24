@@ -14,6 +14,7 @@
 
 - (void) setDatos:(NSDictionary *)userDictionary
 {
+    NSLog(@"En el modelo");
     identifier  = [userDictionary objectForKey:@"id"];
     username    = [userDictionary objectForKey:@"username"];
     name        = [userDictionary objectForKey:@"name"];

@@ -85,12 +85,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE67931C1744C7F8001C8959 = {
+		AE4F59FA174CD53200E16371 /* img */ = {
 			isa = PBXGroup;
 			children = (
 				AE15A88317468BAB00D1971F /* Default-568h@2x.png */,
 				AE15A87D17468B7100D1971F /* ico114.png */,
 				AE15A87B17468B6D00D1971F /* ico57.png */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
+		AE67931C1744C7F8001C8959 = {
+			isa = PBXGroup;
+			children = (
+				AE4F59FA174CD53200E16371 /* img */,
 				AE6793541744C81E001C8959 /* GTMOAuth2 */,
 				AE67932E1744C7F8001C8959 /* openApi */,
 				AE6793271744C7F8001C8959 /* Frameworks */,

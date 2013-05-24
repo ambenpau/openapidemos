@@ -39,17 +39,31 @@
                       [NSString stringWithFormat:
                        @"http://denver.uoc.es:8080/webapps/uocapi/api/v1/user?access_token=%@", auth.accessToken]];
     
-    // Hacemos el fetch de datos
-    NSData *userData = [NSData dataWithContentsOfURL:userURL];
+    // Como la consulta a la API puede ser muy lenta, creamos una tarea en segundo plano que se encargue de hacer el request
+    dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
     
-    // Los datos que recibimos los parseamos a una estructura mas manejable como por ejemplo NSDictionary
-    NSDictionary *userDict = [NSJSONSerialization JSONObjectWithData:userData options:0 error:nil];
+    NSLog(@"Fuera de la tarea");
     
-    // Los datos recibidos los pasamos al modelo
-    [self.user setDatos:userDict];
+    dispatch_async(backgroundQueue, ^{
+        NSLog(@"Dentro de la tarea");
+        
+        // Hacemos el fetch de datos
+        NSData *userData = [NSData dataWithContentsOfURL:userURL];
     
-    // Actualizamos la vista
-    [self mostrarDatosUsuario];
+        // Los datos que recibimos los parseamos a una estructura mas manejable como por ejemplo NSDictionary
+        NSDictionary *userDict = [NSJSONSerialization JSONObjectWithData:userData options:0 error:nil];
+    
+        // Los datos recibidos los pasamos al modelo
+        [self.user setDatos:userDict];
+    
+        //La vista solo la puede tocar el thread principal
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Volvemos al hilo principal");
+            // Actualizamos la vista
+            [self mostrarDatosUsuario];
+        });
+        
+    });
 }
 
 - (void)mostrarDatosUsuario

@@ -34,7 +34,7 @@
 }
 
 - (IBAction)acceder:(UIButton *)sender {
-    NSLog(@"Empezamos....");
+    //NSLog(@"Empezamos....");
     [self signIn];
 }
 
@@ -60,7 +60,7 @@
     [self signOut];
     
     GTMOAuth2Authentication *auth = [self myCustomAuth];
-    NSLog(@"SIN Token = %@", [auth accessToken]);
+    //NSLog(@"SIN Token = %@", [auth accessToken]);
     
     GTMOAuth2ViewControllerTouch *viewController;
     viewController = [[GTMOAuth2ViewControllerTouch alloc]
@@ -93,9 +93,9 @@
         auth = nil; */
     } else {
         // Sign-in succeeded
-        NSLog(@"Sign-in succeeded");
-        NSLog(@"user=%@ \n authorization=%@ \n expiration date=%@", auth.userAgent, auth.accessToken, auth.expirationDate);
-        NSLog(@"Scope = %@", auth.scope);
+        //NSLog(@"Sign-in succeeded");
+        //NSLog(@"user=%@ \n authorization=%@ \n expiration date=%@", auth.userAgent, auth.accessToken, auth.expirationDate);
+        //NSLog(@"Scope = %@", auth.scope);
         self.labelError.text = @"Access Granted";
         self.labelError.textColor = [UIColor greenColor];
         
