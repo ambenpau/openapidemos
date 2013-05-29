@@ -47,14 +47,13 @@
 //        NSLog(@"Dentro de la tarea");
         
         // Hacemos el fetch de datos
-        NSError * error = nil;
         NSData *userData = [NSData dataWithContentsOfURL:userURL];
         
         // Los datos que recibimos los parseamos a una estructura mas manejable como por ejemplo NSDictionary
         NSDictionary *userDict = [NSJSONSerialization JSONObjectWithData:userData options:0 error:nil];
         
         if ([userDict valueForKey:@"error"]) {
-//            NSLog(@"%@: %@",[userDict valueForKey:@"error"],[userDict valueForKey:@"error_description"]);
+            NSLog(@"%@: %@",[userDict valueForKey:@"error"],[userDict valueForKey:@"error_description"]);
             return;
         }
         
