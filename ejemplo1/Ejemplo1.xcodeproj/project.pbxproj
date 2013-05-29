@@ -41,14 +41,14 @@
 		AE15A88317468BAB00D1971F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AE47F29317455D8600370271 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AE47F29417455D8600370271 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
-		AE6793251744C7F8001C8959 /* openApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE6793251744C7F8001C8959 /* Ejemplo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ejemplo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6793281744C7F8001C8959 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AE67932A1744C7F8001C8959 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AE67932C1744C7F8001C8959 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AE6793301744C7F8001C8959 /* openApi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "openApi-Info.plist"; sourceTree = "<group>"; };
+		AE6793301744C7F8001C8959 /* Ejemplo1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ejemplo1-Info.plist"; sourceTree = "<group>"; };
 		AE6793321744C7F8001C8959 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE6793341744C7F8001C8959 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AE6793361744C7F8001C8959 /* openApi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "openApi-Prefix.pch"; sourceTree = "<group>"; };
+		AE6793361744C7F8001C8959 /* Ejemplo1-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ejemplo1-Prefix.pch"; sourceTree = "<group>"; };
 		AE6793371744C7F8001C8959 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE6793381744C7F8001C8959 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AE67933A1744C7F8001C8959 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		AE6793261744C7F8001C8959 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE6793251744C7F8001C8959 /* openApi.app */,
+				AE6793251744C7F8001C8959 /* Ejemplo1.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,10 +153,10 @@
 		AE67932F1744C7F8001C8959 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AE6793301744C7F8001C8959 /* openApi-Info.plist */,
+				AE6793301744C7F8001C8959 /* Ejemplo1-Info.plist */,
 				AE6793311744C7F8001C8959 /* InfoPlist.strings */,
 				AE6793341744C7F8001C8959 /* main.m */,
-				AE6793361744C7F8001C8959 /* openApi-Prefix.pch */,
+				AE6793361744C7F8001C8959 /* Ejemplo1-Prefix.pch */,
 				AE67933A1744C7F8001C8959 /* Default.png */,
 				AE67933C1744C7F8001C8959 /* Default@2x.png */,
 				AE67933E1744C7F8001C8959 /* Default-568h@2x.png */,
@@ -183,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE6793241744C7F8001C8959 /* openApi */ = {
+		AE6793241744C7F8001C8959 /* Ejemplo1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE6793481744C7F8001C8959 /* Build configuration list for PBXNativeTarget "openApi" */;
+			buildConfigurationList = AE6793481744C7F8001C8959 /* Build configuration list for PBXNativeTarget "Ejemplo1" */;
 			buildPhases = (
 				AE6793211744C7F8001C8959 /* Sources */,
 				AE6793221744C7F8001C8959 /* Frameworks */,
@@ -195,9 +195,9 @@
 			);
 			dependencies = (
 			);
-			name = openApi;
+			name = Ejemplo1;
 			productName = openApi;
-			productReference = AE6793251744C7F8001C8959 /* openApi.app */;
+			productReference = AE6793251744C7F8001C8959 /* Ejemplo1.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +209,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Universitat Oberta de Catalunya";
 			};
-			buildConfigurationList = AE6793201744C7F8001C8959 /* Build configuration list for PBXProject "openApi" */;
+			buildConfigurationList = AE6793201744C7F8001C8959 /* Build configuration list for PBXProject "Ejemplo1" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -221,7 +221,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE6793241744C7F8001C8959 /* openApi */,
+				AE6793241744C7F8001C8959 /* Ejemplo1 */,
 			);
 		};
 /* End PBXProject section */
@@ -345,13 +345,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "openApi/openApi-Prefix.pch";
-				INFOPLIST_FILE = "openApi/openApi-Info.plist";
+				GCC_PREFIX_HEADER = "openApi/Ejemplo1-Prefix.pch";
+				INFOPLIST_FILE = "openApi/Ejemplo1-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Ejemplo1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -360,13 +360,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "openApi/openApi-Prefix.pch";
-				INFOPLIST_FILE = "openApi/openApi-Info.plist";
+				GCC_PREFIX_HEADER = "openApi/Ejemplo1-Prefix.pch";
+				INFOPLIST_FILE = "openApi/Ejemplo1-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Ejemplo1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -374,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE6793201744C7F8001C8959 /* Build configuration list for PBXProject "openApi" */ = {
+		AE6793201744C7F8001C8959 /* Build configuration list for PBXProject "Ejemplo1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE6793461744C7F8001C8959 /* Debug */,
@@ -383,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE6793481744C7F8001C8959 /* Build configuration list for PBXNativeTarget "openApi" */ = {
+		AE6793481744C7F8001C8959 /* Build configuration list for PBXNativeTarget "Ejemplo1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE6793491744C7F8001C8959 /* Debug */,

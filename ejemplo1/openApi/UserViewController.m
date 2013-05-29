@@ -73,7 +73,7 @@
 
 - (void)mostrarDatosUsuario
 {
-    NSLog(@"User: %@", self.user.username);
+//    NSLog(@"User: %@", self.user.username);
     self.username.text   = self.user.username;
     self.name.text       = self.user.name;
     self.number.text     = self.user.number;

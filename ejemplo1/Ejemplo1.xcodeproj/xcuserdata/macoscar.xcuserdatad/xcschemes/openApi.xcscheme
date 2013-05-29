@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AE6793241744C7F8001C8959"
                BuildableName = "openApi.app"
-               BlueprintName = "openApi"
-               ReferencedContainer = "container:openApi.xcodeproj">
+               BlueprintName = "Ejemplo1"
+               ReferencedContainer = "container:Ejemplo1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE6793241744C7F8001C8959"
             BuildableName = "openApi.app"
-            BlueprintName = "openApi"
-            ReferencedContainer = "container:openApi.xcodeproj">
+            BlueprintName = "Ejemplo1"
+            ReferencedContainer = "container:Ejemplo1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE6793241744C7F8001C8959"
             BuildableName = "openApi.app"
-            BlueprintName = "openApi"
-            ReferencedContainer = "container:openApi.xcodeproj">
+            BlueprintName = "Ejemplo1"
+            ReferencedContainer = "container:Ejemplo1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE6793241744C7F8001C8959"
             BuildableName = "openApi.app"
-            BlueprintName = "openApi"
-            ReferencedContainer = "container:openApi.xcodeproj">
+            BlueprintName = "Ejemplo1"
+            ReferencedContainer = "container:Ejemplo1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

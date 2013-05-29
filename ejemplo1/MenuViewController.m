@@ -126,7 +126,14 @@
         userViewController.auth = self.auth;
         [self.navigationController pushViewController:userViewController animated:YES];
     } else {
-        NSLog(@"No esta implementada esta solucion");
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Opcion no implementada"
+                                                            message:@"Esta opción no esta implementada"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        
+        [alertView show];
+//        NSLog(@"No esta implementada esta solucion");
     }
 }
 
