@@ -70,6 +70,7 @@
 		AE6793571744C86C001C8959 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AE999BBC174FC04500FF80FF /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
 		AE999BBD174FC04500FF80FF /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = ../MenuViewController.m; sourceTree = "<group>"; };
+		AEE0EB6F1755F78600B1C138 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +142,7 @@
 				AE47F29417455D8600370271 /* UserViewController.m */,
 				AE6793431744C7F8001C8959 /* ViewController.h */,
 				AE6793441744C7F8001C8959 /* ViewController.m */,
+				AEE0EB6F1755F78600B1C138 /* Constants.h */,
 				AE15A87817466A6B00D1971F /* User.h */,
 				AE15A87917466A6B00D1971F /* User.m */,
 				AE67932F1744C7F8001C8959 /* Supporting Files */,
