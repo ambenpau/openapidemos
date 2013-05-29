@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AE6793241744C7F8001C8959"
-               BuildableName = "Ejemplo1.app"
+               BuildableName = "openApi.app"
                BlueprintName = "Ejemplo1"
                ReferencedContainer = "container:Ejemplo1.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE6793241744C7F8001C8959"
-            BuildableName = "Ejemplo1.app"
+            BuildableName = "openApi.app"
             BlueprintName = "Ejemplo1"
             ReferencedContainer = "container:Ejemplo1.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE6793241744C7F8001C8959"
-            BuildableName = "Ejemplo1.app"
+            BuildableName = "openApi.app"
             BlueprintName = "Ejemplo1"
             ReferencedContainer = "container:Ejemplo1.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE6793241744C7F8001C8959"
-            BuildableName = "Ejemplo1.app"
+            BuildableName = "openApi.app"
             BlueprintName = "Ejemplo1"
             ReferencedContainer = "container:Ejemplo1.xcodeproj">
          </BuildableReference>
