@@ -30,6 +30,7 @@
 		AE67935A1744C967001C8959 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AE67934E1744C816001C8959 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AE67935B1744C967001C8959 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6793501744C816001C8959 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AE67935C1744C967001C8959 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6793521744C816001C8959 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AE999BBE174FC04500FF80FF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE999BBD174FC04500FF80FF /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		AE6793531744C816001C8959 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 		AE6793551744C85A001C8959 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AE6793571744C86C001C8959 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AE999BBC174FC04500FF80FF /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
+		AE999BBD174FC04500FF80FF /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = ../MenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 		AE67932E1744C7F8001C8959 /* openApi */ = {
 			isa = PBXGroup;
 			children = (
+				AE999BBC174FC04500FF80FF /* MenuViewController.h */,
+				AE999BBD174FC04500FF80FF /* MenuViewController.m */,
 				AE6793371744C7F8001C8959 /* AppDelegate.h */,
 				AE6793381744C7F8001C8959 /* AppDelegate.m */,
 				AE6793401744C7F8001C8959 /* MainStoryboard.storyboard */,
@@ -252,6 +257,7 @@
 				AE6793451744C7F8001C8959 /* ViewController.m in Sources */,
 				AE47F29517455D8600370271 /* UserViewController.m in Sources */,
 				AE15A87A17466A6B00D1971F /* User.m in Sources */,
+				AE999BBE174FC04500FF80FF /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

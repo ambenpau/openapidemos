@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MenuViewController.h"
 
 #define keychainName    @"OpenApi_UOC"
 #define urlToken        @"http://denver.uoc.es:8080/webapps/uocapi/oauth/token"
@@ -21,10 +22,24 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad
 {
+    self.loadedAuth = 0;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (self.loadedAuth == 1) {
+        MenuViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuView"];
+        menuViewController.auth = self.auth;
+        [self.navigationController pushViewController:menuViewController animated:YES];
+        self.loadedAuth = 0;
+    } else {
+        [self signOut];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,7 +49,6 @@
 }
 
 - (IBAction)acceder:(UIButton *)sender {
-    //NSLog(@"Empezamos....");
     [self signIn];
 }
 
@@ -44,27 +58,23 @@
     [GTMOAuth2ViewControllerTouch removeAuthFromKeychainForName:keychainName];
 }
 
-- (GTMOAuth2Authentication *)myCustomAuth
+- (void)myCustomAuth
 {
-    GTMOAuth2Authentication *auth;
-    auth = [GTMOAuth2Authentication authenticationWithServiceProvider:@"Custom Service"
+    self.auth = [GTMOAuth2Authentication authenticationWithServiceProvider:@"Custom Service"
                                                              tokenURL:[NSURL URLWithString:urlToken]
                                                           redirectURI:urlRedirect
                                                              clientID:idClient
                                                          clientSecret:secretClient];
-    return auth;
 }
 
 - (void)signIn
 {
     [self signOut];
-    
-    GTMOAuth2Authentication *auth = [self myCustomAuth];
-    //NSLog(@"SIN Token = %@", [auth accessToken]);
+    [self myCustomAuth];
     
     GTMOAuth2ViewControllerTouch *viewController;
     viewController = [[GTMOAuth2ViewControllerTouch alloc]
-                      initWithAuthentication:auth
+                      initWithAuthentication:self.auth
                             authorizationURL:[NSURL URLWithString:urlAuth]
                             keychainItemName:keychainName
                                     delegate:self
@@ -79,6 +89,8 @@
 {
     if (error != nil) {
         // Authentication failed (perhaps the user denied access, or closed the window before granting access)
+        
+        self.loadedAuth = 0;
         
         NSLog(@"Authentication error: %@", error);
         self.labelError.text = @"Error de autenticación";
@@ -98,13 +110,7 @@
         //NSLog(@"Scope = %@", auth.scope);
         self.labelError.text = @"Access Granted";
         self.labelError.textColor = [UIColor greenColor];
-        
-        // Cambiamos de controlador al controller de lo que sera el menu.
-        UserViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuView"];
-        // Para que este pueda atacar al servidor le pasamos el objeto de autenticacion que contiene el token
-        menuViewController.auth = auth;
-        [self presentViewController:menuViewController animated:YES completion:nil];
+        self.loadedAuth = 1;
     }
 }
-
 @end

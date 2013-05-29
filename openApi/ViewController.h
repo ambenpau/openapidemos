@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UserViewController.h"
 #import "GTMOAuth2ViewControllerTouch.h"
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) int loadedAuth;
 @property (weak, nonatomic) IBOutlet UILabel *labelError;
+@property (nonatomic, strong) GTMOAuth2Authentication *auth;
 
 - (IBAction)acceder:(UIButton *)sender;
 
