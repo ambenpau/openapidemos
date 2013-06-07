@@ -32,6 +32,7 @@
 		AE67935B1744C967001C8959 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6793501744C816001C8959 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AE67935C1744C967001C8959 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6793521744C816001C8959 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AE999BBE174FC04500FF80FF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE999BBD174FC04500FF80FF /* MenuViewController.m */; };
+		AEBFD7621761EDB900B7CF1C /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBFD7611761EDB900B7CF1C /* EventKit.framework */; };
 		AEFC06221756233500E20D44 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC06211756233500E20D44 /* EventsViewController.m */; };
 		AEFC0628175625F900E20D44 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC0627175625F900E20D44 /* Event.m */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		AE6793571744C86C001C8959 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AE999BBC174FC04500FF80FF /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
 		AE999BBD174FC04500FF80FF /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = ../MenuViewController.m; sourceTree = "<group>"; };
+		AEBFD7611761EDB900B7CF1C /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		AEE0EB6F1755F78600B1C138 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		AEFC06201756233500E20D44 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = ../EventsViewController.h; sourceTree = "<group>"; };
 		AEFC06211756233500E20D44 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = ../EventsViewController.m; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBFD7621761EDB900B7CF1C /* EventKit.framework in Frameworks */,
 				AE3E441A1745118E00F7E3F3 /* Security.framework in Frameworks */,
 				AE6793581744C86C001C8959 /* SystemConfiguration.framework in Frameworks */,
 				AE6793291744C7F8001C8959 /* UIKit.framework in Frameworks */,
@@ -111,6 +114,7 @@
 		AE67931C1744C7F8001C8959 = {
 			isa = PBXGroup;
 			children = (
+				AEBFD7611761EDB900B7CF1C /* EventKit.framework */,
 				AE4F59FA174CD53200E16371 /* img */,
 				AE6793541744C81E001C8959 /* GTMOAuth2 */,
 				AE67932E1744C7F8001C8959 /* openApi */,
