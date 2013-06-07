@@ -11,6 +11,7 @@
 		AE15A87C17468B6D00D1971F /* ico57.png in Resources */ = {isa = PBXBuildFile; fileRef = AE15A87B17468B6D00D1971F /* ico57.png */; };
 		AE15A87E17468B7100D1971F /* ico114.png in Resources */ = {isa = PBXBuildFile; fileRef = AE15A87D17468B7100D1971F /* ico114.png */; };
 		AE15A88417468BAB00D1971F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE15A88317468BAB00D1971F /* Default-568h@2x.png */; };
+		AE20B925175F51ED0074475D /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE20B924175F51ED0074475D /* EventViewController.m */; };
 		AE3E441A1745118E00F7E3F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6793551744C85A001C8959 /* Security.framework */; };
 		AE44E51817454B21008815FC /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6793531744C816001C8959 /* GTMOAuth2ViewTouch.xib */; };
 		AE47F29517455D8600370271 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE47F29417455D8600370271 /* UserViewController.m */; };
@@ -31,6 +32,8 @@
 		AE67935B1744C967001C8959 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6793501744C816001C8959 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AE67935C1744C967001C8959 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6793521744C816001C8959 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AE999BBE174FC04500FF80FF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE999BBD174FC04500FF80FF /* MenuViewController.m */; };
+		AEFC06221756233500E20D44 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC06211756233500E20D44 /* EventsViewController.m */; };
+		AEFC0628175625F900E20D44 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC0627175625F900E20D44 /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,8 @@
 		AE15A87B17468B6D00D1971F /* ico57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico57.png; sourceTree = "<group>"; };
 		AE15A87D17468B7100D1971F /* ico114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico114.png; sourceTree = "<group>"; };
 		AE15A88317468BAB00D1971F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AE20B923175F51ED0074475D /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewController.h; path = ../EventViewController.h; sourceTree = "<group>"; };
+		AE20B924175F51ED0074475D /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewController.m; path = ../EventViewController.m; sourceTree = "<group>"; };
 		AE47F29317455D8600370271 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AE47F29417455D8600370271 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		AE6793251744C7F8001C8959 /* Ejemplo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ejemplo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +76,10 @@
 		AE999BBC174FC04500FF80FF /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
 		AE999BBD174FC04500FF80FF /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = ../MenuViewController.m; sourceTree = "<group>"; };
 		AEE0EB6F1755F78600B1C138 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		AEFC06201756233500E20D44 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = ../EventsViewController.h; sourceTree = "<group>"; };
+		AEFC06211756233500E20D44 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = ../EventsViewController.m; sourceTree = "<group>"; };
+		AEFC0626175625F900E20D44 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		AEFC0627175625F900E20D44 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,18 +142,24 @@
 		AE67932E1744C7F8001C8959 /* openApi */ = {
 			isa = PBXGroup;
 			children = (
-				AE999BBC174FC04500FF80FF /* MenuViewController.h */,
-				AE999BBD174FC04500FF80FF /* MenuViewController.m */,
+				AEE0EB6F1755F78600B1C138 /* Constants.h */,
+				AE6793401744C7F8001C8959 /* MainStoryboard.storyboard */,
 				AE6793371744C7F8001C8959 /* AppDelegate.h */,
 				AE6793381744C7F8001C8959 /* AppDelegate.m */,
-				AE6793401744C7F8001C8959 /* MainStoryboard.storyboard */,
-				AE47F29317455D8600370271 /* UserViewController.h */,
-				AE47F29417455D8600370271 /* UserViewController.m */,
 				AE6793431744C7F8001C8959 /* ViewController.h */,
 				AE6793441744C7F8001C8959 /* ViewController.m */,
-				AEE0EB6F1755F78600B1C138 /* Constants.h */,
+				AE999BBC174FC04500FF80FF /* MenuViewController.h */,
+				AE999BBD174FC04500FF80FF /* MenuViewController.m */,
+				AE47F29317455D8600370271 /* UserViewController.h */,
+				AE47F29417455D8600370271 /* UserViewController.m */,
 				AE15A87817466A6B00D1971F /* User.h */,
 				AE15A87917466A6B00D1971F /* User.m */,
+				AEFC06201756233500E20D44 /* EventsViewController.h */,
+				AEFC06211756233500E20D44 /* EventsViewController.m */,
+				AEFC0626175625F900E20D44 /* Event.h */,
+				AEFC0627175625F900E20D44 /* Event.m */,
+				AE20B923175F51ED0074475D /* EventViewController.h */,
+				AE20B924175F51ED0074475D /* EventViewController.m */,
 				AE67932F1744C7F8001C8959 /* Supporting Files */,
 			);
 			path = openApi;
@@ -260,6 +275,9 @@
 				AE47F29517455D8600370271 /* UserViewController.m in Sources */,
 				AE15A87A17466A6B00D1971F /* User.m in Sources */,
 				AE999BBE174FC04500FF80FF /* MenuViewController.m in Sources */,
+				AEFC06221756233500E20D44 /* EventsViewController.m in Sources */,
+				AEFC0628175625F900E20D44 /* Event.m in Sources */,
+				AE20B925175F51ED0074475D /* EventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,21 +1,19 @@
 //
-//  MenuViewController.m
-//  openApi
+//  EventsViewController.m
+//  Ejemplo2
 //
-//  Created by macoscar on 24/05/13.
+//  Created by macoscar on 29/05/13.
 //  Copyright (c) 2013 Universitat Oberta de Catalunya. All rights reserved.
 //
 
-#import "MenuViewController.h"
-#import "GTMOAuth2Authentication.h"
-#import "UserViewController.h"
 #import "EventsViewController.h"
+#import "EventViewController.h"
 
-@interface MenuViewController ()
+@interface EventsViewController ()
 
 @end
 
-@implementation MenuViewController
+@implementation EventsViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -23,23 +21,22 @@
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.events = [[NSMutableArray alloc] init];
+    [self cargarEventos];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.celdas = [[NSMutableArray alloc] initWithObjects:
-              @"Usuario",
-              @"Calendario",
-              @"...",
-              nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,22 +56,26 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.celdas count];
+    return [self.events count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Recuperamos el nombre de la celda que hay en la posicion indexPath.row
-    NSString *CellIdentifier = [self.celdas objectAtIndex:indexPath.row];
     
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    // Recuperamos el evento correspondiente al numero de celda
+    Event *evento = [self.events objectAtIndex:indexPath.row];
+
+    //NSLog(@"Summary = %@", evento.summary);
+
+    // Recuperamos el nombre que queremos poner de titulo a la celda
+    NSString *CellIdentifier = [[NSString alloc] initWithString:evento.summary];
+    //NSLog(@"Cell = %d", [self.events count]);
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    // Configure the cell...
     
-    // Asignamos el nombre (label) a la celda
     cell.textLabel.text = CellIdentifier;
     
-    // Devolvemos la celda bien etiquetada
     return cell;
 }
 
@@ -121,24 +122,45 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    EventViewController *eventViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"eventView"];
+    eventViewController.evento = [self.events objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:eventViewController animated:YES];
+}
 
-    if (indexPath.row == 0) {
-        UserViewController *userViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UserView"];
-        userViewController.auth = self.auth;
-        [self.navigationController pushViewController:userViewController animated:YES];
-    } else if (indexPath.row == 1) {
-        EventsViewController *eventsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"EventsView"];
-        eventsViewController.auth = self.auth;
-        [self.navigationController pushViewController:eventsViewController animated:YES];
-    } else {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Opcion no implementada"
-                                                            message:@"Esta opción no esta implementada"
-                                                           delegate:self
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
+- (void)cargarEventos
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
+    NSURL *eventsURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://denver.uoc.es:8080/webapps/uocapi/api/v1/calendar/events?access_token=%@", self.auth.accessToken]];
+    
+    dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+    
+    dispatch_async(backgroundQueue, ^{
+        NSData *eventsData = [NSData dataWithContentsOfURL:eventsURL];
         
-        [alertView show];
-//        NSLog(@"No esta implementada esta solucion");
+        NSDictionary *eventsDict = [NSJSONSerialization JSONObjectWithData:eventsData options:0 error:nil];
+        
+        if ([eventsDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [eventsDict valueForKey:@"error"], [eventsDict valueForKey:@"error_description"]);
+            return;
+        }
+        
+        [self setDatos:eventsDict];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        });
+    });
+}
+
+- (void)setDatos:(NSDictionary *)dict
+{
+    //NSLog(@"Implementar la carga de datos al modelo");
+    for (NSDictionary *evento in [dict objectForKey:@"events"]) {
+        Event *e = [[Event alloc] init];
+        [e setDatos:evento];
+        [self.events addObject:e];
     }
 }
 
