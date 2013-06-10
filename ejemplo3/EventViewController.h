@@ -20,6 +20,6 @@
 
 @property (nonatomic, retain) Event *evento;
 
-- (IBAction)crearEvento;
+- (IBAction)crearRecordatorio;
 
 @end
