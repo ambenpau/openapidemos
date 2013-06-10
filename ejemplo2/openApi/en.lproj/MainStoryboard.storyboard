@@ -308,43 +308,6 @@
             <point key="canvasLocation" x="183" y="468"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="EventViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="crearEvento"/>
-                <relationship kind="outlet" name="end" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="identifier" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="start" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="summary" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="url" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EventsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsViewController.h"/>
-        </class>
-        <class className="MenuViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-        </class>
-        <class className="UserViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="email" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="fullname" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imagenUser" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="number" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="username" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="acceder:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="labelError" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

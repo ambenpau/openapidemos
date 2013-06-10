@@ -1,5 +1,5 @@
 //
-//  LereleViewController.m
+//  EventViewController.m
 //  Ejemplo2
 //
 //  Created by macoscar on 05/06/13.
@@ -10,7 +10,7 @@
 #import <EventKit/EventKit.h>
 
 @interface EventViewController () {
-//    EKEventStore *store;
+    
 }
 
 @end
@@ -24,16 +24,19 @@
     self.identifier.text    = [[NSString alloc] initWithFormat:@"id evento: %@", self.evento.identifier];
     self.summary.text       = self.evento.summary;
     self.url.text           = self.evento.url;
-    self.start.text         = self.evento.start;
-    self.end.text           = self.evento.end;
+    
+    // Definimos el formato de printar la fecha y hora del evento
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd'/'MM'/'yyyy' - 'HH':'mm"];
+    
+    self.start.text         = [dateFormat stringFromDate:self.evento.start];
+    self.end.text           = [dateFormat stringFromDate:self.evento.end];
     
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-//    store = [[EKEventStore alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,41 +45,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSDate *)parserDate:(NSString *)dateString
+- (IBAction)crearEvento
 {
-    //NSString *date = [[NSDate date] description];
-    [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehavior10_4];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSSz"];
-    
-    NSDate *dateFromString = [[NSDate alloc] init];
-    dateFromString = [dateFormatter dateFromString:dateString];
-    
-    
-//    NSDateFormatter *formatoSalida = [[NSDateFormatter alloc] init];
-//    [formatoSalida setTimeStyle:NSDateFormatterLongStyle];
-//    [formatoSalida setDateStyle:NSDateFormatterLongStyle];
-//    NSString *date = [formatoSalida stringFromDate:dateFromString];
-//    NSLog(@"Fecha (parserDate) = %@", date);
-    
-    return dateFromString;
-    //NSCalendar *calendar = [NSCalendar currentCalendar];
-    //NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:date];
-    
-    //NSLog(@"Summary = %i", components.hour);
-}
-
-- (IBAction)crearEvento {
-//    NSDateFormatter *formatoSalida = [[NSDateFormatter alloc] init];
-//    [formatoSalida setTimeStyle:NSDateFormatterLongStyle];
-//    [formatoSalida setDateStyle:NSDateFormatterLongStyle];
-//    NSString *date = [formatoSalida stringFromDate:[self parserDate:self.evento.start]];
-//    
-//    NSLog(@"Fecha (crearEvento) = %@", date);
     EKEventStore *store = [[EKEventStore alloc] init];
     
+    // Pedimos privilegios al dueño para poder trabajar con Calendar
     [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error){
-    
+        
         if (!granted) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Acceso denegado" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
@@ -84,13 +59,15 @@
         } else {
             EKEvent *event = [EKEvent eventWithEventStore:store];
             
-            //Configuramos la informacion basica del evento que vamos a crear
+            //Indicamos que vamos a crear el evento en el calendario predeterminado del dispositivo
             event.calendar = [store defaultCalendarForNewEvents];
             
-            event.title = self.evento.summary;
-            event.startDate = [self parserDate:self.evento.start];
-            event.endDate = [self parserDate:self.evento.end];
+            // Añadimos los datos del evento en si
+            event.title     = self.evento.summary;
+            event.startDate = self.evento.start;
+            event.endDate   = self.evento.end;
             
+            // Registramos el evento (persistencia)
             if([store saveEvent:event span:EKSpanThisEvent commit:YES error:nil] == YES){
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [[[UIAlertView alloc] initWithTitle:@"Guardado" message:@"Se ha guardado correctamente el evento en su agenda" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];

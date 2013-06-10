@@ -1,5 +1,5 @@
 //
-//  LereleViewController.h
+//  EventViewController.h
 //  Ejemplo2
 //
 //  Created by macoscar on 05/06/13.

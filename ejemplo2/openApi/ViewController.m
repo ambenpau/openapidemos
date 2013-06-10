@@ -55,10 +55,10 @@
 - (void)myCustomAuth
 {
     self.auth = [GTMOAuth2Authentication authenticationWithServiceProvider:@"Custom Service"
-                                                             tokenURL:[NSURL URLWithString:urlToken]
-                                                          redirectURI:urlRedirect
-                                                             clientID:idClient
-                                                         clientSecret:secretClient];
+                                                                  tokenURL:[NSURL URLWithString:urlToken]
+                                                               redirectURI:urlRedirect
+                                                                  clientID:idClient
+                                                              clientSecret:secretClient];
 }
 
 - (void)signIn
@@ -69,10 +69,10 @@
     GTMOAuth2ViewControllerTouch *viewController;
     viewController = [[GTMOAuth2ViewControllerTouch alloc]
                       initWithAuthentication:self.auth
-                            authorizationURL:[NSURL URLWithString:urlAuth]
-                            keychainItemName:keychainName
-                                    delegate:self
-                            finishedSelector:@selector(viewController:finishedWithAuth:error:)];
+                      authorizationURL:[NSURL URLWithString:urlAuth]
+                      keychainItemName:keychainName
+                      delegate:self
+                      finishedSelector:@selector(viewController:finishedWithAuth:error:)];
     
     [[self navigationController] pushViewController:viewController animated:YES];
 }
@@ -88,15 +88,6 @@
         
         NSLog(@"Authentication error: %@", error);
         self.labelError.text = @"Error de autenticación";
-      /*  NSData *responseData = [[error userInfo] objectForKey:@"data"]; // kGTMHTTPFetcherStatusDataKey
-        
-        if ([responseData length] > 0) {
-            // show the body of the server's authentication failure response
-            NSString *str = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] ;
-            NSLog(@"%@", str);
-        }
-        
-        auth = nil; */
     } else {
         // Sign-in succeeded
         //NSLog(@"Sign-in succeeded");

@@ -13,8 +13,8 @@
 @property (nonatomic, retain) NSString *identifier;
 @property (nonatomic, retain) NSString *url;
 @property (nonatomic, retain) NSString *summary;
-@property (nonatomic, retain) NSString *start;
-@property (nonatomic, retain) NSString *end;
+@property (nonatomic, retain) NSDate *start;
+@property (nonatomic, retain) NSDate *end;
 
 - (void) setDatos:(NSDictionary *)eventDictionary;
 

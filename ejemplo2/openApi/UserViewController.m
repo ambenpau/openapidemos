@@ -41,11 +41,7 @@
     // Como la consulta a la API puede ser muy lenta, creamos una tarea en segundo plano que se encargue de hacer el request
     dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
     
-//    NSLog(@"Fuera de la tarea");
-    
     dispatch_async(backgroundQueue, ^{
-//        NSLog(@"Dentro de la tarea");
-        
         // Hacemos el fetch de datos
         NSData *userData = [NSData dataWithContentsOfURL:userURL];
         
@@ -57,12 +53,11 @@
             return;
         }
         
-        // Los datos recibidos los pasamos al modelo
+        // Los datos recibidos los guardamos en el modelo
         [self.user setDatos:userDict];
         
         //La vista solo la puede tocar el thread principal
         dispatch_async(dispatch_get_main_queue(), ^{
-//            NSLog(@"Volvemos al hilo principal");
             // Actualizamos la vista
             [self mostrarDatosUsuario];
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -73,7 +68,6 @@
 
 - (void)mostrarDatosUsuario
 {
-//    NSLog(@"User: %@", self.user.username);
     self.username.text   = self.user.username;
     self.name.text       = self.user.name;
     self.number.text     = self.user.number;
